@@ -1,6 +1,9 @@
 #WebPA Feature
 IMAGE_INSTALL_append = " parodus parodus2ccsp"
 
+#TR069 Feature
+IMAGE_INSTALL_append = " ccsp-tr069-pa"
+
 ROOTFS_POSTPROCESS_COMMAND_append = "add_busybox_fixes; "
 
 add_busybox_fixes() {

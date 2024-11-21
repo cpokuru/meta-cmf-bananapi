@@ -60,6 +60,12 @@ echo "#SelfHeal
 \$diagMode_LogUploadFrequency=1440
 \$router_reboot_Interval=28800
 \$last_router_reboot_time=0
-\$AggressiveInterval=5"   >> ${D}${sysconfdir}/utopia/system_defaults
+\$AggressiveInterval=5"
 
+#TR069support
+\$EnableTR69Binary=true
+
+#Custom Data Model
+$custom_data_model_enabled=0
+$custom_data_model_file_name=/usr/ccsp/tr069pa/custom_mapper.xml"  >> ${D}${sysconfdir}/utopia/system_defaults
 }

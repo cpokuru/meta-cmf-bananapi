@@ -44,7 +44,8 @@ do_install_append_class-target() {
    install -D -m 0644 ${WORKDIR}/gwprovapp.conf ${D}${systemd_unitdir}/system/gwprovapp.service.d/gwprovapp.conf
    rm ${D}${systemd_unitdir}/system/utopia.service
 
-
+   #SNMP SUPPORT
+   sed -i "/tcp\:192.168.254.253\:705/a  ExecStart=\/usr\/bin\/snmp_subagent \&" ${D}${systemd_unitdir}/system/snmpSubAgent.service
 }
 
 

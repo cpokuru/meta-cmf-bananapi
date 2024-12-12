@@ -32,3 +32,5 @@ DISTRO_FEATURES_append = " rdkb_cellular_manager_mm"
 
 #Dac Feature support for BPIR4 device.
 DISTRO_FEATURES_append = " dac"
+
+DISTRO_FEATURES_append = " partner_default_ext"

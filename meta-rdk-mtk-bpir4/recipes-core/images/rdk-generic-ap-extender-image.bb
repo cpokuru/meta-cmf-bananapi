@@ -1,12 +1,3 @@
-SUMMARY = "A console-only image for the RDK-B yocto build"
-
-inherit rdk-image
-IMAGE_ROOTFS_SIZE = "8192"
-
-IMAGE_INSTALL_append = " \
-    packagegroup-ap-extender \
-    "
-
 #SDCARD supported Pre build bootloader
 do_build[depends] += "${@bb.utils.contains('DISTRO_FEATURES','sdmmc','atf_bootloader_prebuild:do_deploy','',d)}"
 
